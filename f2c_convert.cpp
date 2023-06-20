@@ -7,7 +7,7 @@ int main()
     double celsius;
     cout << "Please enter Celsius:" << endl;
     cin >> celsius;
-    farrenheit = celsius * (9/5) + 32;
+    farrenheit = celsius * (9.0/5.0) + 32;
     cout << "Farrenheit is " << farrenheit << endl;
     return 0;
 }
