@@ -2,34 +2,29 @@
 #include <cmath>
 using namespace std;
 
-int max(int a, int b); 
+bool CheckLogin(string exp_pwd);
 
 int main()
 {
-    int x, y;
-    cin >> x >> y;
-    int mx = 1 + max(x,y);
-    cout << mx << endl;
-    cout << max(0,x) << endl;
-    /*
-    int x;
-    double val;
-    cout << "Enter a pos. #" << endl;
-    cin >> val;
-    if( val >= 0) {
-        double res = sqrt(x);
-        cout << "Result=" << res << endl;
+    string pass = "Open123!";
+    bool valid;
+
+    valid = CheckLogin(pass);
+    if (valid == true)
+    {
+        cout << "success!" << endl;
     }
-    else {
-        cout << "Error!" << endl;
+    else
+    {
+        cout << "password unmatched" << endl;
     }
-    */    
+    return 0;
 }
 
-int max(int a, int b)
+bool CheckLogin(string exp_pwd)
 {
-    if(a > b)
-        return a;
-    else 
-        return b;
+    string pwd;
+    cout << "Enter your password: " << endl;
+    cin >> pwd;
+    return pwd == exp_pwd;
 }
